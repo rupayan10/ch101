@@ -1,0 +1,22 @@
+.Login {
+	& .header {
+		text-align: center;
+		margin: 40px auto;
+		font-size: 30px;
+		color: #303f9f;
+		text-transform: uppercase;
+	}
+	& form {
+		display: flex;
+		flex-flow: column;
+		& > * {
+			width: 300px;
+			margin: 15px auto;
+		}
+	}
+	& button {
+		font-size: 18px;
+		margin-top: 40px;
+		max-width: 120px;
+	}
+}

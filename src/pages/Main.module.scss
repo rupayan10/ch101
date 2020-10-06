@@ -1,0 +1,60 @@
+.Main {
+	& .toolbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		& .avatar {
+			background-color: blue;
+		}
+		& > * {
+			margin: 15px 10px;
+		}
+		& .title {
+			color: blue;
+			font-size: 30px;
+		}
+		& .button {
+			font-weight: 600;
+			font-size: 20px;
+			color: red;
+		}
+	}
+
+	& .content {
+		margin-top: 40px;
+		& .header {
+			text-align: center;
+        }
+        & h2 {
+            margin-bottom: 20px;
+        }
+		& .details {
+			margin-top: 50px;
+			display: flex;
+			justify-content: space-evenly;
+			& .added {
+				display: flex;
+				flex-flow: column;
+				& > span {
+					font-size: 20px;
+					margin: 15px 0;
+				}
+			}
+			& .edit {
+				& form {
+					display: flex;
+					flex-flow: column;
+					& > * {
+						width: 300px;
+						margin: 15px auto;
+					}
+					& button {
+						font-size: 18px;
+						margin-top: 40px;
+						max-width: 120px;
+					}
+				}
+			}
+		}
+	}
+}

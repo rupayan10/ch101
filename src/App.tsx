@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import Login from './pages/Login';
+import Main from './pages/Main';
+
+export interface User {
+  fName: string;
+  lName: string;
+  email: string;
+  username: string;
+}
 
 function App() {
+
+  const [auth, setAuth] = useState<boolean>(false);
+  const [userData, setUserData] = useState<User | null>(null);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {auth ? <Main userData={userData} setUserData={setUserData} setAuth={setAuth} /> : <Login setAuth={setAuth} setUserData={setUserData} />}
     </div>
   );
 }
