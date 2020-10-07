@@ -11,7 +11,6 @@ export interface User {
 }
 
 function App() {
-
   const [auth, setAuth] = useState<boolean>(false);
   const [userData, setUserData] = useState<User | null>(null);
   return (

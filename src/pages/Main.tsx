@@ -1,5 +1,6 @@
 import { AppBar, Avatar, Button, IconButton, TextField, Tooltip, Typography } from '@material-ui/core';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { User } from '../App';
 import styles from './Main.module.scss';
@@ -35,9 +36,9 @@ const Main = ({ setAuth, userData, setUserData }: MainProps) => {
     };
 
     return (
-        <div className={styles.Main}>
+        <motion.div initial={{ x: 1000, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className={styles.Main}>
             <AppBar className={styles.appbar} color="transparent" position="static">
-                <div className={styles.toolbar}>
+                <motion.div className={styles.toolbar}>
                     <Avatar className={styles.avatar}>{userData?.fName.charAt(0).toUpperCase()}</Avatar>
                     <Typography variant="h5" className={styles.title}>
                         App
@@ -47,9 +48,9 @@ const Main = ({ setAuth, userData, setUserData }: MainProps) => {
                             <PowerSettingsNewIcon fontSize="large" />
                         </IconButton>
                     </Tooltip>
-                </div>
+                </motion.div>
             </AppBar>
-            <div className={styles.content}>
+            <motion.div initial={{ y: 500, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 }} className={styles.content}>
                 <div className={styles.header}>
                     <h1>WELCOME ABOARD!</h1>
                     <h2>Mr. {userData?.fName}</h2>
@@ -73,8 +74,8 @@ const Main = ({ setAuth, userData, setUserData }: MainProps) => {
                         </form>
                     </div>
                 </div>
-            </div>
-        </div >
+            </motion.div>
+        </motion.div >
     );
 };
 

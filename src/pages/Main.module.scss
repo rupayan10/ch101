@@ -1,22 +1,24 @@
 .Main {
+	height: 100vh;
 	& .toolbar {
+		background-color: #414141;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		& .avatar {
-			background-color: blue;
+			background-color: orange;
 		}
 		& > * {
-			margin: 15px 10px;
+			margin: 5px 10px;
 		}
 		& .title {
-			color: blue;
+			color: orange;
 			font-size: 30px;
 		}
 		& .button {
 			font-weight: 600;
 			font-size: 20px;
-			color: red;
+			color: orange;
 		}
 	}
 
@@ -24,10 +26,12 @@
 		margin-top: 40px;
 		& .header {
 			text-align: center;
-        }
-        & h2 {
-            margin-bottom: 20px;
-        }
+		}
+		& h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
 		& .details {
 			margin-top: 50px;
 			display: flex;
